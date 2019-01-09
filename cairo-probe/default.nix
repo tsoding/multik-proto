@@ -5,6 +5,7 @@ with import <nixpkgs> {}; {
                         gcc
                         pkgconfig
                         cairo
+                        SDL2
                       ];
     };
 }
