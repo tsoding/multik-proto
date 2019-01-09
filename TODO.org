@@ -16,8 +16,11 @@
     - [X] [[https://www.linux-nantes.org/~fmonnier/OCaml/ocaml-wrapping-c.html][How to wrap C functions to OCaml]]
       - [X] [[file:ocaml-c/][file:./ocaml-c/]]
         - [X] Too complicated
-  - [ ] MLton
-    - [ ] [[http://www.mlton.org/][MLton]]
+  - [-] MLton
+    - [-] [[http://www.mlton.org/][MLton]]
+      - [-] [[file:mlton-c/][file:./mlton-c/]]
+        - [X] Compilation is extremely slow.
+        - [ ] 
 - [ ] Quick video rendering
   - [ ] [[https://gstreamer.freedesktop.org/][GStreamer: open source multimedia framework]]
   - [ ] [[https://ffmpeg.org/libavcodec.html][Libavcodec Documentation]]
