@@ -1,0 +1,12 @@
+- [-] Vector Graphics
+  - [X] cairo
+    - [X] [[https://www.cairographics.org/][cairographics.org]]
+      - [X] bezier curve
+        - [X] They work quite well
+  - [ ] 
+- [ ] Fast feedback loop preview
+  - [ ] SDL
+    - [ ] [[https://www.libsdl.org/download-2.0.php][Simple DirectMedia Layer - SDL version 2.0.9 (stable)]]
+- [ ] Functional Programming
+- [ ] Static typing
+- [ ] Quick video rendering
