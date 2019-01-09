@@ -7,6 +7,11 @@
 - [ ] Fast feedback loop preview
   - [ ] SDL
     - [ ] [[https://www.libsdl.org/download-2.0.php][Simple DirectMedia Layer - SDL version 2.0.9 (stable)]]
-- [ ] Functional Programming
-- [ ] Static typing
+      - [ ] The performace of SDL+cairo is not clear yet
+  - [ ] 
+- [ ] Functional Programming with Static typing
+  - [ ] OCaml
+    - [ ] [[https://www.linux-nantes.org/~fmonnier/OCaml/ocaml-wrapping-c.html][How to wrap C functions to OCaml]]
 - [ ] Quick video rendering
+  - [ ] [[https://gstreamer.freedesktop.org/][GStreamer: open source multimedia framework]]
+  - [ ] [[https://ffmpeg.org/libavcodec.html][Libavcodec Documentation]]
