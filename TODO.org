@@ -2,16 +2,22 @@
   - [X] cairo
     - [X] [[https://www.cairographics.org/][cairographics.org]]
       - [X] bezier curve
-        - [X] They work quite well
-  - [ ] 
+        - [X] [[file:cairo-probe/][file:./cairo-probe/]]
+          - [X] They work quite well
+  - [ ] ...
 - [ ] Fast feedback loop preview
   - [ ] SDL
     - [ ] [[https://www.libsdl.org/download-2.0.php][Simple DirectMedia Layer - SDL version 2.0.9 (stable)]]
-      - [ ] The performace of SDL+cairo is not clear yet
-  - [ ] 
-- [ ] Functional Programming with Static typing
-  - [ ] OCaml
-    - [ ] [[https://www.linux-nantes.org/~fmonnier/OCaml/ocaml-wrapping-c.html][How to wrap C functions to OCaml]]
+      - [ ] [[file:cairo-probe/][file:./cairo-probe/]]
+        - [ ] The performace of SDL+cairo is not clear yet
+  - [ ] ...
+- [-] Functional Programming with Static typing
+  - [X] OCaml
+    - [X] [[https://www.linux-nantes.org/~fmonnier/OCaml/ocaml-wrapping-c.html][How to wrap C functions to OCaml]]
+      - [X] [[file:ocaml-c/][file:./ocaml-c/]]
+        - [X] Too complicated
+  - [ ] MLton
+    - [ ] [[http://www.mlton.org/][MLton]]
 - [ ] Quick video rendering
   - [ ] [[https://gstreamer.freedesktop.org/][GStreamer: open source multimedia framework]]
   - [ ] [[https://ffmpeg.org/libavcodec.html][Libavcodec Documentation]]
