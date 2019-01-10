@@ -25,6 +25,8 @@
     - [X] [[http://www.mlton.org/][MLton]]
       - [X] [[file:mlton-c/][file:./mlton-c/]]
         - [X] Compilation is extremely slow.
-- [ ] Quick video rendering
-  - [ ] [[https://gstreamer.freedesktop.org/][GStreamer: open source multimedia framework]]
+- [-] Quick video rendering
+  - [X] [[https://gstreamer.freedesktop.org/][GStreamer: open source multimedia framework]]
+    - [X] Looks too big for this project
   - [ ] [[https://ffmpeg.org/libavcodec.html][Libavcodec Documentation]]
+    - [ ] [[https://www.ffmpeg.org/doxygen/0.6/api-example_8c-source.html][FFmpeg: libavcodec/api-example.c Source File]]
