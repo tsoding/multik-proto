@@ -9,12 +9,13 @@
     - [ ] [[https://www.libsdl.org/download-2.0.php][Simple DirectMedia Layer - SDL version 2.0.9 (stable)]]
       - [ ] [[file:cairo-probe/][file:./cairo-probe/]]
         - [ ] The performace of SDL+cairo is not clear yet
-  - [X] Hot reload of OCaml code
-    - [X] [[file:ocaml-hotreload/][file:./ocaml-hotreload/]]
+  - [-] Hot reload of OCaml code
+    - [-] [[file:ocaml-hotreload/][file:./ocaml-hotreload/]]
       - [X] [[https://jaredforsyth.com/posts/hot-reloading-ocaml-on-web-desktop-and-android/][Hot-reloading OCaml on Web, Desktop, and Android | Jared Forsyth.com]]
         - [X] Dynlink.load does not exist
-      - [X] [[http://zderadicka.eu/plugins-in-ocaml-with-dynlink-library/][Plugins in OCAML with Dynlink library | Ivanovo]]
-        - [X] Works perfectly!
+      - [ ] [[http://zderadicka.eu/plugins-in-ocaml-with-dynlink-library/][Plugins in OCAML with Dynlink library | Ivanovo]]
+        - [ ] Works perfectly!
+          - [ ] Except native plugins
 - [X] Functional Programming with Static typing
   - [X] OCaml
     - [X] [[https://www.linux-nantes.org/~fmonnier/OCaml/ocaml-wrapping-c.html][How to wrap C functions to OCaml]]
