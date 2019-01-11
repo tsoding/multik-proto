@@ -2,10 +2,8 @@
 #include <caml/mlvalues.h>
 
 CAMLprim value
-get_an_int( value v )
+caml_print_hello(value unit)
 {
-    int i;
-    i = Int_val(v);
-    printf("%d\n", i);
+    printf("Hello\n");
     return Val_unit;
 }
