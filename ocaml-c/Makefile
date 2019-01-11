@@ -1,11 +1,10 @@
-hello: hello.cmo dllhello_stubs.so
-	ocamlc -o hello hello.cmo -dllib dllhello_stubs.so
+all: hello.opt
 
-hello.cmo: hello.ml
-	ocamlc -c  hello.ml
+hello.opt: hello.cmx hello_stubs.o
+	ocamlopt -o hello.opt hello_stubs.o hello.cmx -ccopt "$(shell pkg-config --cflags --libs sdl2 cairo)" 
 
-dllhello_stubs.so: hello_stubs.o
-	ocamlmklib -o hello_stubs hello_stubs.o
+hello.cmx: hello.ml
+	ocamlopt -c hello.ml -ccopt "$(shell pkg-config --cflags --libs sdl2 cairo)"
 
 hello_stubs.o: hello_stubs.c
-	ocamlc -c hello_stubs.c
+	ocamlopt -c hello_stubs.c -ccopt "$(shell pkg-config --cflags --libs sdl2 cairo)"
