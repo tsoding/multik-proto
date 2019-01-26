@@ -56,8 +56,8 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
     context->bit_rate = 400 * 1000;
-    context->width = 352;
-    context->height = 288;
+    context->width = 1920;
+    context->height = 1080;
     context->time_base = (AVRational){1, 25};
     context->framerate = (AVRational){25, 1};
     context->gop_size = 10;
@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    for (int i = 0; i < 25; i++) {
+    for (int i = 0; i < context->framerate.num * 5; i++) {
         ret = av_frame_make_writable(frame);
         if (ret < 0) {
             fprintf(stderr, "%s\n", av_err2str(ret));
