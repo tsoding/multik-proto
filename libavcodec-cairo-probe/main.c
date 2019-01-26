@@ -34,6 +34,36 @@ static void encode(AVCodecContext *context, AVFrame *frame,
     }
 }
 
+void sample_animation_yuv42p(AVCodecContext *context, AVFrame *frame,
+                             AVPacket *pkt, FILE *outfile)
+{
+    for (int i = 0; i < context->framerate.num * 5; i++) {
+        int ret = av_frame_make_writable(frame);
+        if (ret < 0) {
+            fprintf(stderr, "%s\n", av_err2str(ret));
+            exit(EXIT_FAILURE);
+        }
+
+        for (int y = 0; y < context->height; ++y) {
+            for (int x = 0; x < context->width; ++x) {
+                frame->data[0][y * frame->linesize[0] + x] = x + y + i * 3;
+            }
+        }
+
+        for (int y = 0; y < context->height / 2; ++y) {
+            for (int x = 0; x < context->width / 2; ++x) {
+                frame->data[1][y * frame->linesize[1] + x] = 128 + y + i * 2;
+                frame->data[2][y * frame->linesize[2] + x] = 64 + x + i * 5;
+            }
+        }
+
+        frame->pts = i;
+
+        encode(context, frame, pkt, outfile);
+    }
+    encode(context, NULL, pkt, outfile);
+}
+
 int main(int argc, char *argv[])
 {
     if (argc <= 2) {
@@ -102,31 +132,7 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    for (int i = 0; i < context->framerate.num * 5; i++) {
-        ret = av_frame_make_writable(frame);
-        if (ret < 0) {
-            fprintf(stderr, "%s\n", av_err2str(ret));
-            exit(EXIT_FAILURE);
-        }
-
-        for (int y = 0; y < context->height; ++y) {
-            for (int x = 0; x < context->width; ++x) {
-                frame->data[0][y * frame->linesize[0] + x] = x + y + i * 3;
-            }
-        }
-
-        for (int y = 0; y < context->height / 2; ++y) {
-            for (int x = 0; x < context->width / 2; ++x) {
-                frame->data[1][y * frame->linesize[1] + x] = 128 + y + i * 2;
-                frame->data[2][y * frame->linesize[2] + x] = 64 + x + i * 5;
-            }
-        }
-
-        frame->pts = i;
-
-        encode(context, frame, pkt, f);
-    }
-    encode(context, NULL, pkt, f);
+    sample_animation_yuv42p(context, frame, pkt, f);
 
     uint8_t endcode[] = {0, 0, 1, 0xb7};
     fwrite(endcode, 1, sizeof(endcode), f);
