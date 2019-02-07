@@ -13,9 +13,12 @@
     - [-] [[file:ocaml-hotreload/][file:./ocaml-hotreload/]]
       - [X] [[https://jaredforsyth.com/posts/hot-reloading-ocaml-on-web-desktop-and-android/][Hot-reloading OCaml on Web, Desktop, and Android | Jared Forsyth.com]]
         - [X] Dynlink.load does not exist
-      - [ ] [[http://zderadicka.eu/plugins-in-ocaml-with-dynlink-library/][Plugins in OCAML with Dynlink library | Ivanovo]]
-        - [ ] Works perfectly!
-          - [ ] Except native plugins
+      - [X] [[http://zderadicka.eu/plugins-in-ocaml-with-dynlink-library/][Plugins in OCAML with Dynlink library | Ivanovo]]
+        - [X] Works perfectly!
+          - [X] Except native plugins
+	    - [X] And I need native to interact with C code
+      - [ ] Client Server architecture
+	- [ ] [[file:unix-socket/][file:./unix-socket/]]
 - [X] Functional Programming with Static typing
   - [X] OCaml
     - [X] [[https://www.linux-nantes.org/~fmonnier/OCaml/ocaml-wrapping-c.html][How to wrap C functions to OCaml]]
